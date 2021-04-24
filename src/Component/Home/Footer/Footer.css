@@ -1,0 +1,10 @@
+li{
+    color: #B4B4B4;
+}
+@media (max-width:767px) {
+    .footer-container{
+        text-align: center!important;
+    
+    }
+    
+}

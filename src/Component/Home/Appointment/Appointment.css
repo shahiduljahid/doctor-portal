@@ -1,0 +1,87 @@
+.appointment-container {
+  background-image: url(../../../images/appointment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 90%;
+  
+ 
+  position: relative;
+  background-position: center;
+}
+.apointmentInfo{
+  position: absolute;
+  z-index:2;
+  right:100;
+  width: 30%;
+  
+
+
+  
+   
+}
+.appointment-container::after {
+  height: 400px;
+  content: " ";
+  position: absolute;
+  top: 0;
+
+  left: 0;
+  width: 86.5%;
+  z-index: 1;
+  opacity: 0.6;
+
+  background-color: #3a4256;
+}
+
+.doctor {
+  transform: translateY(-100px);
+  position: relative;
+
+  z-index: 2;
+}
+@media (max-width: 1400px) {
+  .appointment-container p {
+    display: none;
+  }
+  .appointment-container::after {
+    width: 87%;
+  }
+}
+@media (max-width: 1199px) {
+  .appointment-container::after {
+    width: 94.5%;
+  }
+}
+@media (max-width: 991px) {
+  .appointment-container::after {
+    width: 100%;
+  }
+  .apointmentInfo{
+    position: relative;
+    width: 100%;
+    
+  
+     
+  }
+  .text-light{
+    color: black!important;
+  }
+ 
+}
+
+@media (max-width: 767px) {
+  .appointment-container::after {
+    width: 100%;
+  }
+  .appointment-container p {
+    display: block;
+  }
+ 
+  .text-white {
+    color: #394054 !important;
+  }
+ 
+  
+
+}

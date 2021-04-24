@@ -1,0 +1,42 @@
+.Header-container {
+  height: 800px;
+  width: 100%;
+
+  position: relative;
+}
+.Header-container::after {
+  height: 700px;
+  content: " ";
+  position: absolute;
+  top: 0;
+  width: 30%;
+  z-index: -20;
+
+  right: 0;
+  background-color: #3a4256;
+}
+@media (max-width: 1400px) {
+  .Header-container::after {
+    height: 600px;
+
+    width: 35%;
+  }
+}
+@media (max-width: 1200px) {
+  .Header-container::after {
+    width: 40%;
+  }
+}
+@media (max-width: 991px) {
+  .Header-container::after {
+    background-color: white;
+  }
+  .Header-container {
+    height: 1100px !important ;
+  }
+}
+@media (max-width: 767px) {
+  .Header-container::after {
+    background-color: white;
+  }
+}

@@ -1,0 +1,39 @@
+.contact-container {
+  background-image: url(../../../images/appointment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  margin: auto !important;
+
+  position: relative;
+  background-position: center;
+}
+
+.contact-container::after {
+  height: 600px;
+  content: " ";
+  position: absolute;
+  top: 0;
+
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.9;
+
+  background-color: #3a4256;
+}
+.form {
+  z-index: 3;
+}
+.text-light {
+  color: white !important;
+}
+@media (max-width: 767px) {
+  .contact-container::after {
+    height: 550px;
+  }
+  .contact-container {
+    height: 550px;
+  }
+}

@@ -1,0 +1,11 @@
+@media (max-width:991px) {
+
+   .navigation {
+       color: dimgray!important;
+   }
+   .pe-5{
+    padding-right: 0!important;
+}
+
+    
+}
