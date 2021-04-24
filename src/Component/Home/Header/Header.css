@@ -36,11 +36,14 @@
     background-color: white;
   }
   .Header-container {
-    height: 1100px !important ;
+    height: 1200px !important ;
   }
 }
 @media (max-width: 767px) {
   .Header-container::after {
     background-color: white;
+  }
+  .Header-container {
+    height: 1400px !important ;
   }
 }

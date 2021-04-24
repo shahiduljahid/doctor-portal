@@ -81,7 +81,7 @@ const Footer = () => {
                   fontWeight: "bold",
                   textTransform: "uppercase",
                 }}
-                className="btn text-light"
+                className="btn btn-text"
               >
                 +861765808
               </button>

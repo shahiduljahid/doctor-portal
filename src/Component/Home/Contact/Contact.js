@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="row justify-content-left">
         <div className="col-md-8 offset-md-2 form  mt-5 mb-5 p-3">
           <h5 style={{ color: "#1CC7C1" }}>contact us </h5>
-          <h2 className="text-light mb-5">Always connect with use</h2>
+          <h2 className="contact-text mb-5">Always connect with use</h2>
 
           <form action="" className="">
             <input
@@ -37,7 +37,7 @@ const Contact = () => {
               fontWeight: "bold",
               textTransform: "uppercase",
             }}
-            className="btn mt-3 text-light px-5"
+            className="btn mt-3 contact-text px-5"
           >
             submit
           </button>

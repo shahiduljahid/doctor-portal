@@ -26,9 +26,10 @@
 .form {
   z-index: 3;
 }
-.text-light {
-  color: white !important;
+.contact-text{
+    color: white;
 }
+
 @media (max-width: 767px) {
   .contact-container::after {
     height: 550px;
