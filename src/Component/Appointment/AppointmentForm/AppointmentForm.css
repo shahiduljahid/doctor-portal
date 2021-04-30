@@ -1,0 +1,6 @@
+.form-control::-webkit-input-placeholder {
+    color:dimgrey;
+  }
+ .width{
+     width: 20% !important;;
+ }

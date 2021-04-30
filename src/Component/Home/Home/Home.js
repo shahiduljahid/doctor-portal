@@ -1,5 +1,5 @@
 import React from "react";
-import Appointment from "../Appointment/Appointment";
+import AppointmentSection from "../AppointmentSection/AppointmentSection";
 import Artical from "../Artical/Artical";
 import Blogs from "../Blogs/Blogs";
 import Contact from "../Contact/Contact";
@@ -15,7 +15,7 @@ const Home = () => {
       <Header></Header>
       <Service></Service>
       <Artical></Artical>
-      <Appointment></Appointment>
+      <AppointmentSection></AppointmentSection>
       <FeedBack></FeedBack>
       <Blogs></Blogs>
       <Doctors></Doctors>

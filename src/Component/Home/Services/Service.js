@@ -28,8 +28,8 @@ const Service = () => {
     ]
     return (
         <div>
-            <div className="row justify content-center">
-                <div className="col-md-12">
+            <div className="row justify content-center  text-center">
+                <div className="col-md-12 ">
                     <h4 style={{color: ' #1CC7C1'}}>Our services</h4>
                     <h1 style={{color: ' #39405'}}>Services we provides</h1>
 

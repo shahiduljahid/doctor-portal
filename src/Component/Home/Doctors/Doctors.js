@@ -22,11 +22,11 @@ const Doctors = () => {
   ];
   return (
     <div className="container">
-      <div className="col-md-12 mb-5 mt-5 pt-5">
+      <div className="col-md-12 mb-5 mt-5 pt-5  text-center">
         <h5 style={{ color: " #1CC7C1" }}>Our doctors</h5>
       </div>
       <div className="col-md-12">
-        <div className="row justify-content-center">
+        <div className="row justify-content-center  text-center">
             {
                 doctors.map(doc=><DoctorCard doctor={doc}></DoctorCard>)
             }

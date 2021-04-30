@@ -1,4 +1,8 @@
+.navigation{
+    color: white!important;
+}
 @media (max-width:991px) {
+    
 
    .navigation {
        color: dimgray!important;

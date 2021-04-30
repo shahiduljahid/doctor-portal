@@ -1,0 +1,42 @@
+.appointment-header{
+    background-image: url(../../images/banner.png);
+    height: 700px;
+    background-image: cover;
+    display: block;
+    
+}
+@media (max-width:1199px) {
+    .appointment-header{
+        height: 1200px;
+    }
+    
+}
+@media (max-width:991px) {
+    .appointment-header{
+        height: 1250px;
+    }
+    
+}
+@media (max-width:767px) {
+    .appointment-header{
+        height: 1150px;
+    }
+    
+}
+@media (max-width:450px) {
+    .appointment-header{
+     
+        height: 1050px;
+    }
+    
+}
+@media (max-width:350px) {
+    .appointment-header{
+     
+        height: 1000px;
+    }
+    
+}
+
+
+

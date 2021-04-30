@@ -30,7 +30,7 @@ const Blogs = () => {
     }
   ];
   return <div className="container">
-      <div className="col-md-12 mt-5 mb-5">
+      <div className="col-md-12 mt-5 mb-5  text-center">
           <h5 style={{color:'#1CC7C1'}}>our Blogs</h5>
           <h1>From Our Blog News</h1>
       </div>

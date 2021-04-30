@@ -31,7 +31,7 @@ const Artical = () => {
               color: "white",
               fontWeight: "bold",
             }}
-            className="btn mt-5"
+            className="btn mt-5 btn-color"
           >
             Learn More
           </button>

@@ -1,11 +1,11 @@
 import React from "react";
-import "./Appointment.css";
+import "./AppointmentSection.css";
 import doctor from "../../../images/doctor.png";
-const Appointment = () => {
+const AppointmentSection = () => {
   return (
     <div className="container  pt-5 pb-5 offset-md-2">
       <div className="row  justify-content-left m-auto ">
-        <div className="col-md-4 appointment-container  ">
+        <div className="col-md-4 appointment-container text-center ">
           <img
             style={{ height: "500px"}}
             className="img-fluid doctor"
@@ -28,7 +28,7 @@ const Appointment = () => {
               fontWeight: "bold",
               alignItems: "left",
             }}
-            className="btn mt-3"
+            className="btn mt-3 btn-color"
           >
             Learn More
           </button>
@@ -38,4 +38,4 @@ const Appointment = () => {
   );
 };
 
-export default Appointment;
+export default AppointmentSection;
