@@ -3,9 +3,26 @@ import './DashboardMain.css'
 
 const DashBoardMain = ({ totalAppointments }) => {
   const handleDate = (date) => {
-    const dateFormate = date.split("T");
-    console.log(dateFormate);
-    return dateFormate[0];
+    // const dateFormate = date.split("T");
+  
+    // return dateFormate[0];
+
+
+    const newDate = new Date(date).getDate();
+    const newMonth = new Date(date).getMonth();
+    const newYear = new Date(date).getFullYear();
+
+    let dateLength= newDate;
+    dateLength =
+      dateLength > 9
+        ? dateLength
+        : "0" + dateLength;
+
+
+
+
+    const fullDate = `${dateLength}-${newMonth}-${newYear}`
+    return fullDate ;
   };
   const handleTime = (time) => {
     const timeFormate = time.split("-");

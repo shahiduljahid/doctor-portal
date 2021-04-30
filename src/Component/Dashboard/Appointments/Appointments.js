@@ -19,7 +19,7 @@ const Appointments = () => {
     .then(res=>res.json())
     .then(appointment=>setAppointments(appointment))
   };
-  console.log(appointments);
+
 
   return (
     <div>
