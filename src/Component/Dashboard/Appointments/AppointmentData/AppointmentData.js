@@ -1,10 +1,16 @@
 import React from "react";
 
 const AppointmentData = ({ appointments, date }) => {
+
+  const handleTime = (time) => {
+    const timeFormate = time.split("-");
+
+    return timeFormate[0];
+  };
   return (
     <div className="row">
       <div className="d-flex  mx-2 mt-2 justify-content-between">
-        <h5 className="text-color">Appointments</h5>
+        <h5 className="text-color">All Appointments</h5>
         <p className="text-secondary">{date.toDateString()}</p>
       </div>
       <div className="px-5">
@@ -23,7 +29,7 @@ const AppointmentData = ({ appointments, date }) => {
                   <tr>
                    
                     <td style={{fontWeight: "bold"}} className="text-weight-bold">{apm.name}</td>
-                    <td style={{fontWeight: "bold"}}  className="text-weight-bold">{apm.schedule}</td>
+                    <td style={{fontWeight: "bold"}}  className="text-weight-bold">{handleTime (apm.schedule)}</td>
                     <td className="text-weight-bold" > <button style={{fontWeight: "bold"}}  className="btn book-btn btn-color">{apm.action}</button></td>
                   </tr>
                 </tbody>
