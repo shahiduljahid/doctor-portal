@@ -27,7 +27,7 @@ const AppointmentForm = ({ modalIsOpen,visit, closeModal, name, date }) => {
     data.action ='Not visited';
     data.createdDate = new Date();
 
-    fetch("http://localhost:4000/addappointment", {
+    fetch("https://morning-wave-67009.herokuapp.com/addappointment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

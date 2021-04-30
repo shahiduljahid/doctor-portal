@@ -5,7 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 const Patients = () => {
   const [totalAppointments, setTotalAppoints] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/totalAppointments")
+    fetch("https://morning-wave-67009.herokuapp.com/totalAppointments")
       .then((res) => res.json())
       .then((data) => {
         setTotalAppoints(data);

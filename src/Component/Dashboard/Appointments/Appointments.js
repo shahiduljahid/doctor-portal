@@ -11,7 +11,7 @@ const Appointments = () => {
   const handleDate = (date) => {
     setSelectedDate(date);
 
-    fetch("http://localhost:4000/appointments", {
+    fetch("https://morning-wave-67009.herokuapp.com/appointments", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ date }),
