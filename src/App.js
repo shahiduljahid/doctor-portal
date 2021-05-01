@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
@@ -10,38 +10,47 @@ import Patients from "./Component/Dashboard/Patients/Patients";
 import Prescriptions from "./Component/Dashboard/Prescriptions/Prescriptions";
 import AddDoctors from "./Component/Dashboard/AddDoctors/AddDoctors";
 import Settings from "./Component/Dashboard/Settings/Settings";
+import Login from './Component/Login/Login'
+import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
+
+export const userContext = createContext();
 
 function App() {
+  const [loggedInUser ,setLoggedInUser] =useState([])
   return (
+    <userContext.Provider value={[loggedInUser ,setLoggedInUser ]}>
     <div className="App">
       <Router>
         <Switch>
+        <Route path="/login">
+            <Login></Login>
+          </Route>
           <Route path="/Home">
             <Home></Home>
           </Route>
-          <Route path="/appointment">
+          <PrivateRoute path="/appointment">
             <Appointment></Appointment>
-          </Route>
-          <Route path="/appointments">
+          </PrivateRoute>
+          <PrivateRoute path="/appointments">
             <Appointments></Appointments>
-          </Route>
-          <Route path="/dashboard">
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
-          </Route>
-          <Route path="/patients">
+          </PrivateRoute>
+          <PrivateRoute path="/patients">
            <Patients></Patients>
-          </Route>
-          <Route path="/prescription">
+          </PrivateRoute>
+          <PrivateRoute path="/prescription">
            <Prescriptions></Prescriptions>
-          </Route>
-          <Route path="/adddoctors">
+          </PrivateRoute>
+          <PrivateRoute path="/adddoctors">
             <AddDoctors></AddDoctors>
           
-          </Route>
-          <Route path="/settings">
+          </PrivateRoute>
+          <PrivateRoute path="/settings">
             <Settings></Settings>
           
-          </Route>
+          </PrivateRoute>
 
           <Route path="/">
             <Home></Home>
@@ -49,6 +58,7 @@ function App() {
         </Switch>
       </Router>
     </div>
+    </userContext.Provider>
   );
 }
 
