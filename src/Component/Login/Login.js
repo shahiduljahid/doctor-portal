@@ -162,7 +162,8 @@ const Login = () => {
   return (
     <div className="container login-container">
       <div className="row">
-        <div style={{height:'500px'}} className=" loginForm offset-md-1 shadow rounded mb-5 col-md-4 mt-5">
+        <div style={{height:'550px'}} className=" loginForm offset-md-1 shadow rounded mb-5 col-md-4 mt-5">
+          <h4 className="text-center text-secondary mt-3 mb-3">Login</h4>
           <form
             action=""
             onSubmit={handleSubmit}
@@ -221,7 +222,7 @@ const Login = () => {
 
                 <button
                   onClick={() => setNewUser(!newUser)}
-                  className="btn mb-3  btn-secondary ml-2"
+                  className="btn mb-3 text-bold book-btn  btn-color ml-2"
                 >
                   create account
                 </button>
