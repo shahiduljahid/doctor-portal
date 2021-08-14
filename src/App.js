@@ -12,6 +12,7 @@ import AddDoctors from "./Component/Dashboard/AddDoctors/AddDoctors";
 import Settings from "./Component/Dashboard/Settings/Settings";
 import Login from './Component/Login/Login'
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
+import Practice from "./Component/Practice";
 
 export const userContext = createContext();
 
@@ -51,10 +52,14 @@ function App() {
             <Settings></Settings>
           
           </PrivateRoute>
+          <Route path="/P">
+            <Practice></Practice>
+          </Route>
 
           <Route path="/">
             <Home></Home>
           </Route>
+        
         </Switch>
       </Router>
     </div>

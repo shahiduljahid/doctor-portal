@@ -1,28 +1,21 @@
 import React from "react";
-import './DashboardMain.css'
+import "./DashboardMain.css";
 
 const DashBoardMain = ({ totalAppointments }) => {
   const handleDate = (date) => {
     // const dateFormate = date.split("T");
-  
+
     // return dateFormate[0];
 
-
     const newDate = new Date(date).getDate();
-    const newMonth = new Date(date).getMonth();
+    const newMonth = new Date(date).getMonth()+1;
     const newYear = new Date(date).getFullYear();
 
-    let dateLength= newDate;
-    dateLength =
-      dateLength > 9
-        ? dateLength
-        : "0" + dateLength;
+    let dateLength = newDate;
+    dateLength = dateLength > 9 ? dateLength : "0" + dateLength;
 
-
-
-
-    const fullDate = `${dateLength}-${newMonth}-${newYear}`
-    return fullDate ;
+    const fullDate = `${dateLength}-${newMonth}-${newYear}`;
+    return fullDate;
   };
   const handleTime = (time) => {
     const timeFormate = time.split("-");
@@ -32,7 +25,6 @@ const DashBoardMain = ({ totalAppointments }) => {
 
   return (
     <div className="row">
-     
       <div className="px-5">
         <table className="table table-borderless h7 rounded">
           <thead className=" p-1 ">
@@ -62,37 +54,32 @@ const DashBoardMain = ({ totalAppointments }) => {
               <tbody>
                 <tr>
                   <td
-                    style={{ fontWeight: "bold" ,
-                    color:'#0A0A0A'}}
+                    style={{ fontWeight: "bold", color: "#0A0A0A" }}
                     className="text-weight-bold serial-number"
                   >
                     {index + 1}
                   </td>
                   <td
-                        style={{ fontWeight: "bold" ,
-                        color:'#0A0A0A'}}
+                    style={{ fontWeight: "bold", color: "#0A0A0A" }}
                     className="text-weight-bold "
                   >
                     {handleDate(apm.date)}
                   </td>
                   <td
-                      style={{ fontWeight: "bold" ,
-                      color:'#0A0A0A'}}
+                    style={{ fontWeight: "bold", color: "#0A0A0A" }}
                     className="text-weight-bold"
                   >
                     {handleTime(apm.schedule)}
                   </td>
 
                   <td
-                        style={{ fontWeight: "bold" ,
-                        color:'#0A0A0A'}}
+                    style={{ fontWeight: "bold", color: "#0A0A0A" }}
                     className="text-weight-bold"
                   >
                     {apm.name}
                   </td>
                   <td
-                       style={{ fontWeight: "bold" ,
-                       color:'#0A0A0A'}}
+                    style={{ fontWeight: "bold", color: "#0A0A0A" }}
                     className="text-weight-bold contact"
                   >
                     {apm.phoneNumber}
@@ -100,8 +87,7 @@ const DashBoardMain = ({ totalAppointments }) => {
                   <td className="text-weight-bold">
                     {" "}
                     <button
-                          style={{ fontWeight: "bold" 
-                          }}
+                      style={{ fontWeight: "bold" }}
                       className="btn book-btn btn-color"
                     >
                       {apm.action}
