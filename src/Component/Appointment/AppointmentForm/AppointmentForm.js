@@ -25,7 +25,7 @@ const AppointmentForm = ({ modalIsOpen,visit, closeModal, name, date }) => {
     data.schedule = visit;
     data.action ='Not visited';
     data.createdDate = new Date();
-    fetch("https://doc-server-delta.vercel.app/addappointment", {
+    fetch("${process.env.REACT_APP_API_BASE_URL}/addappointment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

@@ -15,7 +15,7 @@ const Appointments = () => {
     const data= `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`
     try {
       const res = await axios.post(
-        `https://doc-server-delta.vercel.app/appointments`,{data}
+        `${process.env.REACT_APP_API_BASE_URL}/appointments`,{data}
       );
       if (res.data) {
         console.log(res.data)

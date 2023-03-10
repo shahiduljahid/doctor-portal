@@ -9,7 +9,7 @@ const Patients = () => {
   useEffect(async() => {
     try {
       const res = await axios.get(
-        `https://doc-server-delta.vercel.app/totalAppointments`
+        `${process.env.REACT_APP_API_BASE_URL}/totalAppointments`
       );
       if (res.data) {
         console.log(res.data)

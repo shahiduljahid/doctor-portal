@@ -44,7 +44,7 @@ npm install
 
 ```bash
 PORT=4000
-DB_CONNECTION=<your MongoDB connection string>
+DB_URI=<your MongoDB connection string>
 ```
 
 ### Create a .env.local file in the client directory and add the following environment variables:
