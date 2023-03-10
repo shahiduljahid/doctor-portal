@@ -17,17 +17,15 @@ const AppointmentForm = ({ modalIsOpen,visit, closeModal, name, date }) => {
   const {
     register,
     handleSubmit,
-
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
     data.service = name;
-    data.date = date;
+    data.date =`${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`
     data.schedule = visit;
     data.action ='Not visited';
     data.createdDate = new Date();
-
-    fetch("https://morning-wave-67009.herokuapp.com/addappointment", {
+    fetch("https://doc-server-delta.vercel.app/addappointment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -35,12 +33,9 @@ const AppointmentForm = ({ modalIsOpen,visit, closeModal, name, date }) => {
     .then(result =>{
       if(result){
         closeModal();
-        alert('successfull')
-
+        alert('Successfull')
       }
     })
-
-   
   };
   return (
     <Modal

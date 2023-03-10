@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindows } from "@fortawesome/free-brands-svg-icons";
-import { faCalendarWeek, faCog, faFileAlt, faUserFriends, faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarWeek, faCog, faFileAlt, faUserFriends, faUserPlus ,faHome} from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
   return (
@@ -37,19 +37,13 @@ const Sidebar = () => {
           </Link>
         </li>
         <li className="nav-item nav-link mb-3 ">
-          <Link  to={'/addDoctors'} style={{ textDecoration: "none" }}>
+          <Link  to={'/home'} style={{ textDecoration: "none" }}>
             <span className="book-btn text-bold">
-              <FontAwesomeIcon  style={{fontSize:'20px'}}  className="me-3" icon={faUserPlus} /> Add doctors
+              <FontAwesomeIcon  style={{fontSize:'20px'}}  className="me-3" icon={faHome} /> Home
             </span>
           </Link>
         </li>
-        <li className="nav-item nav-link mb-3 ">
-          <Link  to={'/settings'} style={{ textDecoration: "none" }}>
-            <span className="book-btn text-bold">
-              <FontAwesomeIcon  style={{fontSize:'20px'}}  className="me-3" icon={faCog} /> Settings
-            </span>
-          </Link>
-        </li>
+     
       </ul>
     </div>
   );

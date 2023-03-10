@@ -49,7 +49,7 @@ const DashBoardMain = ({ totalAppointments }) => {
               </th>
             </tr>
           </thead>
-          {totalAppointments.map((apm, index) => {
+          {totalAppointments && totalAppointments.map((apm, index) => {
             return (
               <tbody>
                 <tr>

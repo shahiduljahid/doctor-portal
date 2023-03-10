@@ -4,20 +4,27 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import AppointmentData from "./AppointmentData/AppointmentData";
 import "./Appointments.css";
+import axios from "axios";
+
 
 const Appointments = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [appointments, setAppointments] = useState([]);
-  const handleDate = (date) => {
+  const handleDate = async(date) => {
     setSelectedDate(date);
+    const data= `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`
+    try {
+      const res = await axios.post(
+        `https://doc-server-delta.vercel.app/appointments`,{data}
+      );
+      if (res.data) {
+        console.log(res.data)
+        setAppointments(res.data)
+      }
+    } catch (err) {
+      console.log(err);
+    }
 
-    fetch("https://morning-wave-67009.herokuapp.com/appointments", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ date }),
-    })
-    .then(res=>res.json())
-    .then(appointment=>setAppointments(appointment))
   };
 
 
